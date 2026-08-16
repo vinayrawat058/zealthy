@@ -8,6 +8,10 @@ Full-stack take-home exercise: a **Patient Portal** for patients and a **Mini EM
 
 
 
+**Note on First Load:** The backend is hosted on Render's free tier, which spins down after periods of inactivity. When you first open the app or log in, the initial API request may take 30–50 seconds to wake up the server. Please be patient if it appears to load slowly initially!
+
+
+
 
 | Layer | Stack | Local URL | Live URL |
 |-------|--------|-----------|----------|
