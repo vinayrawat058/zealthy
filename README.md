@@ -4,7 +4,10 @@ Full-stack take-home exercise: a **Patient Portal** for patients and a **Mini EM
 
 ## Live demo
 
-**Open the app here (frontend):** [https://zealthy.netlify.app](https://zealthy.netlify.app)
+**Open the app here :** [https://zealthyportal.netlify.app](https://zealthyportal.netlify.app)
+
+
+
 
 | Layer | Stack | Local URL | Live URL |
 |-------|--------|-----------|----------|
