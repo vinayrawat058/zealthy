@@ -1,0 +1,26 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+backend/zealthy.db
+*.db
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Env / IDE
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+
+# Misc
+*.log
+backend/frontend/
+73f63d75bb995b6597754c1707e40cc2-*/
