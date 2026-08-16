@@ -47,6 +47,9 @@ export const api = {
   login: (email, password) =>
     request("/api/auth/login", { method: "POST", body: { email, password } }),
 
+  register: (body) =>
+    request("/api/auth/register", { method: "POST", body }),
+
   adminLogin: (email, password) =>
     request("/api/auth/admin/login", {
       method: "POST",

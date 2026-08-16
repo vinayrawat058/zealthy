@@ -78,6 +78,8 @@ export default function LoginPage() {
         </form>
 
         <p className="hint">
+          Don&apos;t have an account? <Link to="/register">Register as patient</Link>
+          <br />
           Staff? <Link to="/admin/login">Doctor login</Link>
         </p>
       </div>

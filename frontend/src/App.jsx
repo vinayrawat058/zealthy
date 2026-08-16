@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "./auth/AuthContext.jsx";
 import { useAdminAuth } from "./auth/AdminAuthContext.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
+import RegisterPage from "./pages/RegisterPage.jsx";
 import PortalHome from "./pages/PortalHome.jsx";
 import PortalAppointments from "./pages/PortalAppointments.jsx";
 import PortalPrescriptions from "./pages/PortalPrescriptions.jsx";
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
       <Route
         path="/portal"
         element={

@@ -15,10 +15,11 @@ Seed data comes from the provided [`data.json`](https://gist.github.com/sbraford
 
 ### Patient Portal (`/`)
 - Login with email + password (patients only)
+- **Register as patient** from the login page (`/register`) — creates patient accounts only
 - Dashboard summary: basic info, appointments in the **next 7 days**, refills in the **next 7 days**
 - Drill-down: full appointment schedule up to **3 months**
 - Drill-down: all prescriptions + refill schedule up to **3 months**
-- No public signup — accounts are created by doctors in the EMR
+- Doctors can also create patients from the mini EMR
 
 ### Mini EMR / Doctor Portal (`/admin`)
 - **Requires doctor login** (not open to the public)
@@ -27,7 +28,8 @@ Seed data comes from the provided [`data.json`](https://gist.github.com/sbraford
 - Full CRUD for appointments (provider, date/time, repeat, end recurring with `ends_on`)
 - Full CRUD for prescriptions (medication, dosage, quantity, refill date, refill schedule)
 - Medication and dosage dropdowns seeded from `data.json`
-- Doctors cannot be registered publicly — only patient accounts can be created from the EMR
+- Doctors cannot be registered publicly — only the seeded doctor account can use the EMR
+- Public `/register` always creates `role=patient` (never admin)
 
 ---
 
@@ -176,7 +178,7 @@ npm run dev
 
 ### Patient auth & portal
 - `POST /api/auth/login` — patients only  
-- `POST /api/auth/register` — **disabled** (403); use EMR to create patients  
+- `POST /api/auth/register` — public patient signup (always `role=patient`)  
 - `GET /api/portal/me` — Bearer token; 7-day summary  
 - `GET /api/portal/appointments` — up to 3 months  
 - `GET /api/portal/prescriptions` — up to 3 months  
@@ -197,7 +199,7 @@ npm run dev
 - Patient and doctor logins are **separate** endpoints and roles  
 - Patients cannot access `/api/admin/*`  
 - Doctors cannot sign in through the patient portal  
-- New patient accounts can only be created by a logged-in doctor  
+- New patient accounts can be created via public register **or** by a logged-in doctor  
 - There is **no public doctor registration**
 
 ---
