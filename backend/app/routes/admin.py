@@ -12,6 +12,11 @@ admin_bp = Blueprint("admin", __name__, url_prefix="/api/admin")
 
 @admin_bp.before_request
 def require_admin():
+    # Browsers send OPTIONS before cross-origin requests with Authorization.
+    # Do not enforce JWT on preflight or CORS will fail in the browser.
+    if request.method == "OPTIONS":
+        return "", 200
+
     verify_jwt_in_request()
     claims = get_jwt()
     if claims.get("role") != "admin":
