@@ -2,10 +2,14 @@
 
 Full-stack take-home exercise: a **Patient Portal** for patients and a **Mini EMR** for doctors/staff.
 
-| Layer | Stack | Local URL |
-|-------|--------|-----------|
-| Frontend | React + Vite | http://127.0.0.1:5173 |
-| Backend | Flask + SQLite | http://127.0.0.1:5000 |
+## Live demo
+
+**Open the app here (frontend):** [https://zealthy.netlify.app](https://zealthy.netlify.app)
+
+| Layer | Stack | Local URL | Live URL |
+|-------|--------|-----------|----------|
+| Frontend | React + Vite | http://127.0.0.1:5173 | [https://zealthy.netlify.app](https://zealthy.netlify.app) |
+| Backend | Flask + SQLite | http://127.0.0.1:5000 | [https://zealthy-gqlj.onrender.com](https://zealthy-gqlj.onrender.com) |
 
 Seed data comes from the provided [`data.json`](https://gist.github.com/sbraford/73f63d75bb995b6597754c1707e40cc2) (copied into `backend/data/data.json`).
 
